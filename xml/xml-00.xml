@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE direccion SYSTEM "xml-00.dtd">
+<direccion>
+    <nombrecompleto>
+        <nombre>Lou</nombre>
+        <apellidos>Mendez</apellidos>
+    </nombrecompleto>
+
+    <correo>l0urdesprigadaa@gmail.com</correo>
+    <telefono>2283114276</telefono>
+    <cumple>
+        <dia>02</dia>
+        <mes>07</mes>
+        <anio>2004</anio>
+    </cumple>
+</direccion>

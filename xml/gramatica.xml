@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entrenamiento SYSTEM "voleyXML.dtd">
+
+<entrenamiento>
+    <jugada>
+        <nombre>Estrategia de Contraataque</nombre>
+
+        <condicional>
+            <situacion>ataque_diagonal</situacion>
+            <entonces>
+                <accion_simple>
+                    <recibir>
+                        <tecnica>golpe_bajo</tecnica>
+                        <precision>centro_red</precision>
+                    </recibir>
+                </accion_simple>
+            </entonces>
+            <sino>
+                <accion_simple>
+                    <rematar>
+                        <fuerza>toque</fuerza>
+                        <direccion>linea</direccion>
+                    </rematar>
+                </accion_simple>
+            </sino>
+        </condicional>
+
+        <bucle>
+            <repeticiones>10</repeticiones>
+            <accion_simple>
+                <saque>
+                    <tipo>potencia</tipo>
+                    <zona>1</zona>
+                </saque>
+            </accion_simple>
+        </bucle>
+    </jugada>
+</entrenamiento>

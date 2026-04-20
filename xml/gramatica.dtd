@@ -1,0 +1,30 @@
+<!ELEMENT entrenamiento (jugada+)>
+
+<!ELEMENT jugada (nombre, (bucle | condicional | accion_simple)+)>
+<!ELEMENT nombre (#PCDATA)>
+
+<!ELEMENT bucle (repeticiones, accion_simple)>
+<!ELEMENT repeticiones (#PCDATA)>
+
+<!ELEMENT condicional (situacion, entonces, sino)>
+<!ELEMENT situacion (#PCDATA)>
+<!ELEMENT entonces (accion_simple)>
+<!ELEMENT sino (accion_simple)>
+
+<!ELEMENT accion_simple (saque?, recibir?, colocar?, rematar?)>
+
+<!ELEMENT saque (tipo, zona)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT zona (#PCDATA)>
+
+<!ELEMENT recibir (tecnica, precision)>
+<!ELEMENT tecnica (#PCDATA)>
+<!ELEMENT precision (#PCDATA)>
+
+<!ELEMENT colocar (tiempo, zonaAtaque)>
+<!ELEMENT tiempo (#PCDATA)>
+<!ELEMENT zonaAtaque (#PCDATA)>
+
+<!ELEMENT rematar (fuerza, direccion)>
+<!ELEMENT fuerza (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
