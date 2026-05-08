@@ -9,38 +9,62 @@
 // let b9 = document.getElementById("b9")
 // let b0 = document.getElementById("b0")
 
-let resultado = document.getElementById("resultado")
-let botones = document.getElementsByTagName("button")
+let resultado = document.getElementById("resultado");
+let botones = document.getElementsByTagName("button");
+
+// Variables globales para guardar los números y la operación
+let prm1 = 0;
+let operacion = "";
+
 for (const key in botones) {
-    if (Object.prototype.hasOwnProperty.call(botones, key)){
+    if (Object.prototype.hasOwnProperty.call(botones, key)) {
         const boton = botones[key];
-        if(boton.className != "operadores")
-            boton.addEventListener("click", pintar)
+        if (boton.className != "operadores")
+            boton.addEventListener("click", pintar);
         else
-            boton.addEventListener("click", pintar2)
-        // console.log(boton)
+            boton.addEventListener("click", pintar2);
     }
 }
 
-function pintar(e){
-    console.log(e.target.innerText)
-    resultado.value += e.target.innerText
+function pintar(e) {
+    resultado.value += e.target.innerText;
 }
 
-function pintar2(e){
-    console.log(e.target.innerText)
-    if(e.target.innerText == "+")
-        suma()
+function pintar2(e) {
+    let operacionSeleccionada = e.target.innerText;
+
+    if (operacionSeleccionada === "=") {
+        igual();
+    } else if (operacionSeleccionada === "Ce") {
+        limpiar();
+    } else {
+        // Si es +, -, * o /
+        prm1 = resultado.value;
+        operacion = operacionSeleccionada;
+        resultado.value = "";
+    }
 }
 
+function igual() {
+    let prm2 = resultado.value;
+    let calculo = 0;
 
-function suma(){
-    prm1 = resultado.value
-    resultado.value = ""
+    // Convertimos a número para hacer la operación matemática
+    let n1 = parseFloat(prm1);
+    let n2 = parseFloat(prm2);
+
+    switch (operacion) {
+        case "+": calculo = n1 + n2; break;
+        case "-": calculo = n1 - n2; break;
+        case "*": calculo = n1 * n2; break;
+        case "/": calculo = n1 / n2; break;
+    }
     
+    resultado.value = calculo;
 }
 
-function igual (){
-    prm2 = resultado.value
-    resultado.value = parseInt(prm1) + parseInt(prm2)
+function limpiar() {
+    resultado.value = "";
+    prm1 = 0;
+    operacion = "";
 }
