@@ -63,7 +63,7 @@ function igual() {
     resultado.value = calculo;
 }
 
-function limpiar() {
+function limpiar( ) {
     resultado.value = "";
     prm1 = 0;
     operacion = "";
