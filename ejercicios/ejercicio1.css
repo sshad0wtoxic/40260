@@ -1,0 +1,11 @@
+img{
+    box-shadow: 10px 10px 20px pink;
+    height: 200px;
+    width: 200px;
+}
+
+figure {
+    text-align: center;
+    width: 220px;
+    display: inline-block;
+}
