@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE note [
+<!ELEMENT note (to, from, heading, body, footer)>
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+<!ELEMENT footer (#PCDATA)>
+<!ENTITY nbsp "&#xA0;">
+<!ENTITY writer "Writer: Donal Duck.">
+<!ENTITY copyright "Copyrigth: W3Schools.">
+]>
+
+<note>
+<to>Tove</to>
+<from>Jani</from>
+<heading>Reminder</heading>
+<body>Don't forget me this weekend!</body>
+<footer>&writer;&nbsp;&copyright;</footer>
+</note>
