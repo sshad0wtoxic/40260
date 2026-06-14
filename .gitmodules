@@ -1,3 +1,9 @@
 [submodule "ejemplo-fei"]
 	path = ejemplo-fei
 	url = https://github.com/sshad0wtoxic/ejemplo-fei.git
+[submodule "poema-40260"]
+	path = poema-40260
+	url = https://github.com/sshad0wtoxic/poema-40260.git
+[submodule "starwars"]
+	path = starwars
+	url = https://github.com/sshad0wtoxic/starwars.git
